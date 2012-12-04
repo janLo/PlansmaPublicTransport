@@ -46,7 +46,7 @@ hafas.timetable.parser.parseHtmlMobile = function( html, hasError, errorString )
 	      .replace( /\/([a-z])ox\b/, "/$1l" )
 	      .replace( /L=[^&]+/, "" );
         departure.TransportLine = helper.simplify( helper.stripTags(routeData.contents)
-                    .replace(/^((?:Bus|STR)\s+)/g, "") );
+                    .replace(/^((?:Bus|STR|DPN)\s+)/g, "") );
 
         var other = departureRow.contents.substr( routeData.endPosition + 1 );
         var pos = other.indexOf("&gt;&gt;");

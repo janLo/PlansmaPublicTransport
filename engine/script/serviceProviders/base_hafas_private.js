@@ -293,7 +293,7 @@ var HafasPrivate = {
     /** Remove unneeded information from the transport line string,
       * such as a (redundant) note about the vehicle type. */
     trimTransportLine: function( transportLine ) {
-        return helper.simplify( transportLine.replace(/^((?:bus|str)\s+)/ig, "") );
+        return helper.simplify( transportLine.replace(/^((?:bus|str|dpn)\s+)/ig, "") );
     },
     startRequest: function( request, addPostDataFunction, values, options ) {
         if ( options.requestType == "GET" ) {
@@ -545,6 +545,7 @@ var HafasPrivate = {
             return PublicTransport.TrolleyBus;
         case "tram":
         case "str":
+        case "dpn":
         case "t":
             return PublicTransport.Tram;
         case "s":
