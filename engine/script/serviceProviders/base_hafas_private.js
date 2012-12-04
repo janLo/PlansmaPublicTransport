@@ -479,6 +479,7 @@ var HafasPrivate = {
         else if ( abbr == "wb" ) return "WESTbahn Management GmbH";
         else if ( abbr == "rnv" ) return "Rhein-Neckar-Verkehr GmbH";
         else if ( abbr == "dwe" ) return "Dessauer Verkehrs- und Eisenbahngesellschaft";
+        else if ( abbr == "dvb" ) return "Dresdner Verkehrsbetriebe";
         else return undefined;
     },
 
