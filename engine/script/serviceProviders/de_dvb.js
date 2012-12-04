@@ -40,14 +40,14 @@ function parseTimetable( json, hasError, errorString ) {
 	dateTime.setHours( time.hour );
 	dateTime.setMinutes( time.minute );
 
-        var vehicleType = "Unknown";
+	var vehicleType = PublicTransport.UnknownVehicleType;
         var line = departure[1];
         if ( line[0] == "S" ) {
-                vehicleType = "InterurbanTrain";
+                vehicleType = PublicTransport.InterurbanTrain;
         } else {
                 var lineNr = parseInt( line );
                 if ( lineNr > 0 ) {
-                        vehicleType = lineNr <= 20 ? "Tram" : "Bus";
+                        vehicleType = lineNr <= 20 ? PublicTransport.Tram : PublicTransport.Bus;
                 }
         }
 
